@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Tarjetas de Felicitación</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Crea tu tarjeta de Felicitación</h1>
+    </header>
+
+    <section id="seleccion-categoria">
+        <h2>Elige una categoría</h2>
+        <button class="btn-categoria" data-categoria="san-valentin">San Valentín</button>
+        <button class="btn-categoria" data-categoria="cumpleanos">Cumpleaños</button>
+        <button class="btn-categoria" data-categoria="dia-madres">Día de las Madres</button>
+    </section>
+
+    <section id="seleccion-imagen" style="display:none;">
+        <h2>Elige una imagen</h2>
+        <img src="media/sv.jpeg" class="opcion-imagen san-valentin">
+        <img src="media/sv1.jpeg" class="opcion-imagen san-valentin">
+        <img src="media/sv2.jpeg" class="opcion-imagen san-valentin">
+        <img src="media/cm.jpeg" class="opcion-imagen cumpleanos" style="display:none;">
+        <img src="media/cm1.jpeg" class="opcion-imagen cumpleanos" style="display:none;">
+        <img src="media/cm2.jpeg" class="opcion-imagen cumpleanos" style="display:none;">
+        <img src="media/mds.jpeg" class="opcion-imagen dia-madres" style="display:none;">
+        <img src="media/mdrs3.jpeg" class="opcion-imagen dia-madres" style="display:none;">
+        <img src="media/mdr2.png" class="opcion-imagen dia-madres" style="display:none;">
+    </section>
+
+    <section id="personalizacion-tarjeta" style="display:none;">
+        <h2>Personaliza tu tarjeta</h2>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="4" cols="50"></textarea>
+
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre">
+
+        <label for="color-fondo">Color de fondo:</label>
+        <input type="color" id="color-fondo">
+
+        <label for="tipo-letra">Tipo de letra:</label>
+        <select id="tipo-letra">
+            <option value="Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Letra 1</option>
+            <option value="Georgia">Letra 2</option>
+            <option value="Times New Roman">Letra 3</option>
+            <option value="Verdana">Letra 4</option>
+            <option value="Courier New">Letra 5</option>
+        </select>
+
+        <label for="tamano-letra">Tamaño de letra:</label>
+        <input type="range" id="tamano-letra" min="10" max="50" value="20">
+
+        <label for="color-letra">Color de letra:</label>
+        <input type="color" id="color-letra">
+    </section>
+
+    <section id="vista-previa-tarjeta" style="display:none;">
+        <h2>Ver tarjeta</h2>
+        <div id="tarjeta" class="tarjeta">
+            <img id="imagen-tarjeta" src="" alt="Imagen de la tarjeta">
+            <p id="mensaje-tarjeta"></p>
+            <p id="nombre-tarjeta"></p>
+        </div>
+        <button id="btn-descargar">Descargar</button>
+    </section>
+
+    <script src="js/formato.js"></script>
+</body>
+</html>
+
